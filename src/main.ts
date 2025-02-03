@@ -1,12 +1,12 @@
-import './style.css';
-import './components/button';
-import './components/card';
+import './assets/css/pui.css'
+import './components/button'
+import './components/card'
 
 // Example usage in the demo page
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="p-8 space-y-8">
     <h1 class="text-3xl font-bold">Lit UI Library Components</h1>
-    
+
     <div class="space-y-4">
       <h2 class="text-xl font-semibold">Buttons</h2>
       <div class="space-x-4">
@@ -26,4 +26,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
     </div>
   </div>
-`;
+`

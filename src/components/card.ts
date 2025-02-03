@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { LitElement, html, css } from 'lit'
+import { customElement } from 'lit/decorators.js'
 
 @customElement('ui-card')
 export class Card extends LitElement {
@@ -16,7 +16,7 @@ export class Card extends LitElement {
     .content {
       @apply px-6 py-4;
     }
-  `;
+  `
 
   render() {
     return html`
@@ -28,6 +28,6 @@ export class Card extends LitElement {
           <slot></slot>
         </div>
       </div>
-    `;
+    `
   }
 }

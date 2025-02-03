@@ -15,8 +15,7 @@ const compat = new FlatCompat({
 
 export default [...compat.extends(
   'plugin:@typescript-eslint/recommended',
-  'eslint:recommended',
-  './.eslintrc-auto-import.json',
+  'eslint:recommended'
 ), {
   plugins: {
     '@typescript-eslint': typescriptEslint
@@ -33,7 +32,7 @@ export default [...compat.extends(
     },
 
     ecmaVersion: 5,
-    sourceType: 'commonjs',
+    sourceType: 'module',
 
     parserOptions: {
       parser: '@typescript-eslint/parser',
