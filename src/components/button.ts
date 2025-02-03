@@ -1,5 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit'
-import { customElement } from 'lit/decorators.js'
+import { customElement, property } from 'lit/decorators.js'
 import style from '../assets/css/pui.css?inline'
 
 
@@ -7,42 +7,19 @@ import style from '../assets/css/pui.css?inline'
 export class Button extends LitElement {
   static styles = css`${unsafeCSS(style)}`
 
-
-  // static styles = css`
-  //   :host {
-  //     display: inline-block;
-  //   }
-  //   button {
-  //     @apply px-4 py-2 rounded-md font-medium transition-colors;
-  //   }
-  //   button.default {
-  //     @apply bg-gray-200 hover:bg-gray-300 text-gray-800;
-  //   }
-  //   button.primary {
-  //     @apply bg-blue-500 hover:bg-blue-600 text-white;
-  //   }
-  //   button.secondary {
-  //     @apply bg-gray-500 hover:bg-gray-600 text-white;
-  //   }
-  // `
-
-  static properties = { variant: { type: String } }
-  variant = 'default'
+  @property() variant: 'default' | 'primary' | 'secondary' = 'default'
 
   render() {
     const classes = {
-      default: this.variant === 'default',
-      primary: this.variant === 'primary',
-      secondary: this.variant === 'secondary'
+      default: 'bg-gray-200 hover:bg-gray-300 text-gray-800',
+      primary: 'bg-blue-500 hover:bg-blue-600 text-white',
+      secondary: 'bg-gray-500 hover:bg-gray-600 text-white'
     }
 
     return html`
       <div>
-        <button class="px-4 py-2 rounded-md font-medium transition-colors bg-blue-500 hover:bg-blue-600 text-white">
+        <button class="px-4 py-2 rounded-md font-medium transition-colors ${classes[this.variant]}">
           <slot></slot>
-        </button>
-        <button class="mybutton">
-          myButton
         </button>
       </div>
     `
