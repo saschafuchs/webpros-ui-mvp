@@ -2,7 +2,7 @@ import './assets/css/wui.css'
 import './components/button'
 import './components/card'
 import './components/badge'
-// Example usage in the demo page
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="p-8 space-y-8">
     <h1 class="text-3xl font-bold">Lit UI Library Components</h1>

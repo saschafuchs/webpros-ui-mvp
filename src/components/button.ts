@@ -15,7 +15,7 @@ const elementSizes = {
 }
 
 @customElement('wui-button')
-export class Button extends LitElement {
+export class WuiButton extends LitElement {
   static styles = css`${unsafeCSS(style)}`
 
   @property() variant: 'default' | 'primary' | 'secondary' = 'default'
@@ -27,5 +27,11 @@ export class Button extends LitElement {
         <slot></slot>
       </button>
     `
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'wui-button': WuiButton
   }
 }

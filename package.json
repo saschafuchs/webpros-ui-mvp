@@ -1,13 +1,40 @@
 {
-  "name": "lit-ui-library",
+  "name": "@webpros/webpros-ui-library",
+  "description": "Web component library using Lit",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "contributors": [
+    {
+      "name": "Sascha Fuchs",
+      "email": "sascha.fuchs@webpros.com"
+    },
+    {
+      "name": "Jorge Flores",
+      "email": "jorge.flores@webpros.com"
+    }
+  ],
+  "main": "dist/wui-lib.js",
+  "module": "dist/wui-lib.js",
+  "types": "dist/wui-lib.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:all": "npm run build:types && npm run build",
+    "prepublishOnly": "npm run build:all"
   },
+  "keywords": [
+    "web-components",
+    "lit",
+    "card",
+    "ui"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^10.0.0",
     "@types/node": "^22.13.1",
@@ -16,15 +43,16 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^7.2.1",
+    "terser": "^5.38.0",
     "typescript": "^5.7.3",
-    "vite": "^6.0.11"
-  },
-  "dependencies": {
+    "vite": "^6.0.11",
     "@tailwindcss/vite": "^4.0.3",
     "@typescript-eslint/eslint-plugin": "^8.23.0",
     "eslint-plugin-lit": "^1.15.0",
-    "lit": "^3.2.1",
     "tailwindcss": "^4.0.3",
     "typescript-eslint": "^8.23.0"
+  },
+  "dependencies": {
+    "lit": "^3.2.1"
   }
 }

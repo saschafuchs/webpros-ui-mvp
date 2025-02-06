@@ -49,7 +49,7 @@ const elementColors = {
 }
 
 @customElement('wui-badge')
-export class Badge extends LitElement {
+export class WuiBadge extends LitElement {
   static styles = css`${unsafeCSS(style)}`
 
   @property() variant: 'solid' | 'outline' | 'soft' | 'subtle' = 'solid'
@@ -62,5 +62,11 @@ export class Badge extends LitElement {
         <slot></slot>
       </span>
     `
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'wui-badge': WuiBadge
   }
 }

@@ -3,7 +3,7 @@ import { customElement, state } from 'lit/decorators.js'
 import style from '../assets/css/wui.css?inline'
 
 @customElement('wui-card')
-export class Card extends LitElement {
+export class WuiCard extends LitElement {
   static styles = css`
     ${unsafeCSS(style)}
     :host {
@@ -50,5 +50,11 @@ export class Card extends LitElement {
         </div>
       </div>
     `
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'wui-card': WuiCard
   }
 }
