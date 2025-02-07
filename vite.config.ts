@@ -26,7 +26,7 @@ export default defineConfig({
         // globals: {
         // lit: 'LitElement'
         // },
-        entryFileNames: 'wui-lib.js',
+        // entryFileNames: 'wui-lib.js',
         assetFileNames: 'wui-lib.[ext]'
       }
     }
