@@ -6,6 +6,11 @@ export default defineConfig({
     tailwindcss()
   ],
   build: {
+    lib: {
+      entry: './src/index.ts',
+      formats: ['es', 'cjs'],
+      fileName: (format) => `wui-lib.${format}.js`
+    },
     cssCodeSplit: false,
     minify: 'terser',
     terserOptions: {
@@ -16,11 +21,11 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      external: ['lit'],
+      // external: ['lit'],
       output: {
-        globals: {
-          lit: 'LitElement'
-        },
+        // globals: {
+        // lit: 'LitElement'
+        // },
         entryFileNames: 'wui-lib.js',
         assetFileNames: 'wui-lib.[ext]'
       }
