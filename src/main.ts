@@ -1,7 +1,5 @@
 import './assets/css/wui.css'
-import './components/button'
-import './components/card'
-import './components/badge'
+import './index'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="p-8 space-y-8">

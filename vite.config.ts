@@ -6,11 +6,11 @@ export default defineConfig({
     tailwindcss()
   ],
   build: {
-    lib: {
-      entry: './src/index.ts',
-      formats: ['es', 'cjs'],
-      fileName: (format) => `wui-lib.${format}.js`
-    },
+    // lib: {
+    //   entry: './src/index.ts',
+    //   formats: ['es', 'cjs'],
+    //   fileName: (format) => `wui-lib.${format}.js`
+    // },
     cssCodeSplit: false,
     minify: 'terser',
     terserOptions: {
@@ -26,7 +26,7 @@ export default defineConfig({
         // globals: {
         // lit: 'LitElement'
         // },
-        // entryFileNames: 'wui-lib.js',
+        entryFileNames: 'wui-lib.js',
         assetFileNames: 'wui-lib.[ext]'
       }
     }
