@@ -3,16 +3,26 @@ import './index'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="p-8 space-y-8">
-    <h1 class="text-3xl font-bold">Lit UI Library Components</h1>
+    <h1 class="text-3xl font-bold">WebPros UI Library Components</h1>
 
     <div class="space-y-4">
       <h2 class="text-xl font-semibold">Buttons</h2>
-      <div class="space-x-4">
-        <wui-button size=small>Default Button</wui-button>
+      <div class="flex flex-row items-center gap-4">
+        <wui-button size=small isDisabled isLoading>
+          Default Button
+        </wui-button>
+        <wui-button size=small isDisabled isLoading>
+          Default Button
+          <span slot="loading">
+            waiting...
+          </span>
+        </wui-button>
+
         <wui-button variant=primary>Primary Button</wui-button>
         <wui-button variant=secondary size=large>Secondary Button</wui-button>
       </div>
     </div>
+
 
     <div>
       <h2 class="text-xl font-semibold">Badges</h2>
