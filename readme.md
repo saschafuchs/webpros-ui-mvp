@@ -82,7 +82,7 @@ function App() {
 ```
 
 ### Inside PHP
-Bei Elementen die Events aussenden, muss man die Events manuell abfangen.
+For elements that send out events, the events must be intercepted manually.
 
 ```php
 <script src="https://unpkg.com/@webpros/webpros-ui-library"></script>
