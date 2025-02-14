@@ -2,7 +2,7 @@
   "name": "@webpros/webpros-ui-library",
   "description": "Web component library using Lit",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "engines": {
     "node": ">=20.0.0"
@@ -19,7 +19,7 @@
   ],
   "main": "dist/wui-lib.js",
   "module": "dist/wui-lib.js",
-  "types": "dist/wui-lib.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "dist"
   ],

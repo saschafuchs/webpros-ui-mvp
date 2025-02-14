@@ -21,17 +21,17 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      // external: ['lit'],
+      external: ['lit'],
       output: {
-        // globals: {
-        // lit: 'LitElement'
-        // },
+        globals: {
+          lit: 'LitElement'
+        },
         entryFileNames: 'wui-lib.js',
         assetFileNames: 'wui-lib.[ext]'
       }
     }
   },
   optimizeDeps: {
-    exclude: ['src/main.ts']
+    exclude: ['src/index.ts']
   }
 })

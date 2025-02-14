@@ -8,7 +8,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="space-y-4">
       <h2 class="text-xl font-semibold">Buttons</h2>
       <div class="flex flex-row items-center gap-4">
-        <wui-button size=small isDisabled isLoading>
+        <wui-button size=small isLoading>
           Default Button
         </wui-button>
         <wui-button size=small isDisabled isLoading>
