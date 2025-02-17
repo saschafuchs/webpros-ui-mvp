@@ -2,11 +2,16 @@
   "name": "@webpros/webpros-ui-library",
   "description": "Web component library using Lit",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "engines": {
     "node": ">=20.0.0"
   },
+  "keywords": [
+    "web-components",
+    "lit",
+    "tailwind"
+  ],
   "contributors": [
     {
       "name": "Sascha Fuchs",
@@ -21,8 +26,10 @@
   "module": "dist/wui-lib.js",
   "types": "types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -31,13 +38,7 @@
     "build:all": "npm run build:types && npm run build",
     "prepublishOnly": "npm run build:all"
   },
-  "keywords": [
-    "web-components",
-    "lit",
-    "card",
-    "ui"
-  ],
-  "license": "MIT",
+
   "devDependencies": {
     "@eslint/js": "^10.0.0",
     "@tailwindcss/vite": "^4.0.6",
